@@ -1,4 +1,4 @@
-FROM node:lts-slim as builder
+FROM node:18 as builder
 
 WORKDIR /app
 
@@ -8,7 +8,7 @@ RUN npm install
 
 COPY . .
 
-FROM node:lts-slim as runner
+FROM node:18 as runner
 
 WORKDIR /app
 
